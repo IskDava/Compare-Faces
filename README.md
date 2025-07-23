@@ -1,6 +1,6 @@
 # Compare-Faces
 
-###### This project has three uploaded models: 
+ This project has three uploaded models: 
 1. `face_noface`
 2. `humanfaces`
 3. `comparenet`
@@ -13,9 +13,11 @@ This is **classification network**, so it can say is there a face or something e
 
 ### Examples
 
-![77%example](./images/randguy.jpg)
-![99%example](./images/me31.jpg)
-![faceimage3](./images/RONALDOTHEGOAT.jpg)
+<div style="display:flex; flex-direction:row;align-items:flex-start;">
+    <img alt="77%example" src="./images/randguy.jpg" style="flex: 1 1 200px; width: auto; height: 200px; object-fit: contain;">
+    <img alt="99%example" src="./images/me31.jpg" style="flex: 1 1 200px; width: auto; height: 200px; object-fit: contain;">
+    <img alt="faceimage3" src="./images/RONALDOTHEGOAT.jpg" style="flex: 1 1 200px; width: auto; height: 200px; object-fit: contain;">
+</div>
 
 ### Installation & Usage
 
@@ -61,9 +63,12 @@ This is **detection network** that work on faces, so it will highlight all faces
 
 ### Examples
 
-![grandpa](./images/grandpaout.jpg)
-![ron1](./images/ron1.jpg)
-![ron2](./images/ron2.jpg)
+<div style="display:flex; flex-direction:row;align-items:flex-start;">
+    <img alt="77%example" src="./images/grandpaout.jpg" style="flex: 1 1 200px; width: auto; height: 200px; object-fit: contain;">
+    <img alt="99%example" src="./images/ron1.jpg" style="flex: 1 1 200px; width: auto; height: 200px; object-fit: contain;">
+    <img alt="faceimage3" src="./images/ron2.jpg" style="flex: 1 1 200px; width: auto; height: 200px; object-fit: contain;">
+</div>
+
 
 ### Installation & Usage
 
@@ -101,3 +106,25 @@ detectnet \
 ### Possible issues
 
 Like other models this model can't work with some types of images like .webp
+
+
+## CompareNet
+
+This isn't my own network, I did it with face_recognition python's library. Here you can compare to images with faces and programm will return if they are same or not and its confidence.
+
+## Examples
+
+<div style="display:flex; flex-direction:row;align-items:flex-start;">
+    <img alt="77%example" src="./images/dos.jpg" style="flex: 1 1 200px; width: auto; height: 200px; object-fit: contain;">
+    <img alt="99%example" src="./images/me31.jpg" style="flex: 1 1 200px; width: auto; height: 200px; object-fit: contain;">
+</div>
+
+<div style="text-align:center; margin-top: 10px;">
+    <img alt="result: 98%" src="./images/comparenet_results.png">
+</div>
+
+## Installation & Usage
+
+This quide is much easier and prettier than others.
+
+1. 
