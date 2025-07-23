@@ -51,7 +51,7 @@ imagenet.py \
 
 ### Possible issues
 
-Network is trained for cropped faces, so if they are far away or there are some other items, it may mistake.
+Network is trained for cropped faces, so if they are far away or there are some other items, it may mistake. Also it can't work with some types of images like .webp
 
 ## HumanFaces
 
@@ -65,7 +65,39 @@ This is **detection network** that work on faces, so it will highlight all faces
 ![ron1](./images/ron1.jpg)
 ![ron2](./images/ron2.jpg)
 
-### Installation
+### Installation & Usage
 
+This guide be a bit simillar to Face_NoFace's one.
+
+1. Download HumanFace [here](https://github.com/IskDava/Compare-Faces/releases/tag/HumanFacesv1.0.0)
+2. Move to your classification folder:
+```Bash
+cd ~/jetson-inference/python/training/detection/ssd
+```
+3. Put them in folder one folder (e.g. face_noface)<br>
+You should have something like this:
+```
+ssd/
+...
+├── HumanFaces/
+│   ├── labels.txt
+│   └── model.onnx
+├── image.jpg
+...
+```
+4. Now we will start our model. You should write this into terminal:
+```Bash 
+detectnet \ 
+  --model=models/humanfaces/ssd-mobilenet.onnx \ # showing where is the model         
+  --labels=models/humanfaces/labels.txt  \ # showing labels
+  --input-blob=input_0  \ # telling input type
+  --output-cvg=scores  \ 
+  --output-bbox=boxes \ # telling output type
+  input.jpg \ # input (can be video as well)
+  output.jpg # output
+```
+5. Congrats! Your new image is `output.jpg`.
 
 ### Possible issues
+
+Like other models this model can't work with some types of images like .webp
