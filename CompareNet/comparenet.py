@@ -50,4 +50,4 @@ with yaspin(text="Calculating...", color="cyan") as spinner:
 
     spinner.ok("✅")
     
-    print(f"Same {result}%" if D <= 0.5 else f"Different {result}%")
+    print(f"Same {result}%" if D <= 0.5 else f"Different {100 - result}%")
