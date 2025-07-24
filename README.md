@@ -24,14 +24,9 @@ This is **classification network**, so it can tell if there is a face or somethi
 I will use [Nvidia Jetson Orin Nano](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/nano-super-developer-kit/) for running Face_NoFace model.
 
 1. Download Face_NoFace from [here](https://github.com/IskDava/Compare-Faces/releases/tag/Face_NoFace_v1.0.0)
-2. Move to your classification folder:
-```Bash
-cd ~/jetson-inference/python/training/classification
-```
-3. Put them in folder one folder (e.g. face_noface)<br>
+2. Put them in folder one folder (e.g. face_noface)<br>
 You should have something like this:
 ```
-classification/
 ...
 ├── face_noface (or any other name)/
 │   ├── labels.txt
@@ -39,7 +34,7 @@ classification/
 ├── image.jpg
 ...
 ```
-4. Now we will start our model. You should write this into terminal:
+3. Now we will start our model. You should write this into terminal:
 ```Bash 
 imagenet.py \
   --model=face_noface/model.onnx \
@@ -49,7 +44,7 @@ imagenet.py \
   image.jpg \
   output.jpg
 ```
-5. Congrats! Your new image is `output.jpg`.
+4. Congrats! Your new image is `output.jpg`.
 
 ### Possible issues
 
@@ -76,11 +71,7 @@ This guide be a bit simillar to `Face_NoFace`'s one.
 
 1. Download HumanFace from [here](https://github.com/IskDava/Compare-Faces/releases/tag/HumanFacesv1.0.0)
 
-2. Move to your classification folder:
-```Bash
-cd ~/jetson-inference/python/training/detection/ssd
-```
-3. Put them in folder one folder (e.g. face_noface)<br>
+2. Put them in folder one folder (e.g. face_noface)<br>
 You should have something like this:
 ```
 ssd/
@@ -91,7 +82,7 @@ ssd/
 ├── image.jpg
 ...
 ```
-4. Now we will start our model. You should write this into terminal:
+3. Now we will start our model. You should write this into terminal:
 ```Bash 
 detectnet \
   --model=models/humanfaces/ssd-mobilenet.onnx \
@@ -102,7 +93,7 @@ detectnet \
   input.jpg \
   output.jpg
 ```
-5. Congrats! Your new image is `output.jpg`.
+4. Congrats! Your new image is `output.jpg`.
 
 ### Possible issues
 
