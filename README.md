@@ -85,7 +85,7 @@ ssd/
 3. Now we will start our model. You should write this into terminal:
 ```Bash 
 detectnet \
-  --model=humanfaces/ssd-mobilenet.onnx \
+  --model=humanfaces/model.onnx \
   --labels=humanfaces/labels.txt  \
   --input-blob=input_0  \
   --output-cvg=scores  \
