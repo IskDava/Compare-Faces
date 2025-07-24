@@ -41,12 +41,12 @@ classification/
 ```
 4. Now we will start our model. You should write this into terminal:
 ```Bash 
-imagenet.py \ 
+imagenet.py \
   --model=face_noface/model.onnx \
   --labels=face_noface/labels.txt \
-  --input_blob=input_0 \ 
-  --output_blob=output_0 \ 
-  image.jpg \ 
+  --input_blob=input_0 \
+  --output_blob=output_0 \
+  image.jpg \
   output.jpg
 ```
 5. Congrats! Your new image is `output.jpg`.
@@ -93,11 +93,11 @@ ssd/
 ```
 4. Now we will start our model. You should write this into terminal:
 ```Bash 
-detectnet \ 
+detectnet \
   --model=models/humanfaces/ssd-mobilenet.onnx \
   --labels=models/humanfaces/labels.txt  \
   --input-blob=input_0  \
-  --output-cvg=scores  \ 
+  --output-cvg=scores  \
   --output-bbox=boxes \
   input.jpg \
   output.jpg
